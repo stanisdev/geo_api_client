@@ -11,4 +11,13 @@ router.get('/registration', (req, res, next) => {
   });
 });
 
+/**
+ * Auth
+ */
+router.get('/auth', (req, res, next) => {
+  res.render('users/auth.html', {
+    title: 'Authorization'
+  });
+});
+
 app.use('/users', router);

@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div style="width: 400px;">
+
+  <input type="text" class="form-control" id="email" placeholder="Введите email">
+  <div id="email_error" class="gError">&nbsp;</div>
+
+  <input type="password" class="form-control" id="password" placeholder="Введите пароль">
+  <div id="password_error" class="gError">&nbsp;</div>
+
+  <button id="auth" type="button" class="btn btn-primary btn-lg">Войти</button>
+
+</div>
+
+
+{% endblock %}

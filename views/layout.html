@@ -13,18 +13,21 @@
       <a class="navbar-brand" href="#">Info by IP</a>
 
       <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav mr-auto">
+        <ul id="gMenu" style="display: none;" class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="/">Главная</a>
           </li>
-          <li class="nav-item">
+          <li id="menuCash" class="nav-item">
+            <a class="nav-link" href="/cash/deposit">Средства</a>
+          </li>
+          <li id="menuRegistration" class="nav-item">
             <a class="nav-link" href="/users/registration">Регистрация</a>
           </li>
-          <li class="nav-item">
+          <li id="menuAuth" class="nav-item">
             <a class="nav-link" href="/users/auth">Войти</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/users/logout">Выйти</a>
+          <li id="menuLogout" class="nav-item">
+            <a class="nav-link" href="#">Выйти</a>
           </li>
         </ul>
       </div>
