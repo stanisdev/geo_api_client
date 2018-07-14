@@ -3,6 +3,9 @@ const API_URL = 'http://localhost:4000';
 $(() => {
   if (isAuth()) {
     $('#menuAuth, #menuRegistration').remove();
+    if (+window.localStorage.getItem('tariff') !== 2) {
+      $('#menuCash').remove();
+    }
   }
   else {
     $('#menuLogout, #menuCash').remove();
@@ -78,6 +81,7 @@ function usersAuth() {
     }).then((result) => {
       window.localStorage.setItem('access_token', result.data.access_token);
       window.localStorage.setItem('session_id', result.data.session_id);
+      window.localStorage.setItem('tariff', result.data.tariff);
       window.location = '/';
     }).catch(queryFailed);
   });
@@ -96,6 +100,7 @@ function logout() {
     }).then((result) => {
       window.localStorage.removeItem('access_token');
       window.localStorage.removeItem('session_id');
+      window.localStorage.removeItem('tariff');
       window.location = '/';
     }).catch(queryFailed);
   });
@@ -117,6 +122,7 @@ function cashDeposit() {
       url: '/cash/deposit',
       method: 'POST',
     }).then((result) => {
+      $('#amount').val('');
       alert('Успешно!');
     }).catch(queryFailed);
   });
