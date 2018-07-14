@@ -1,0 +1,5 @@
+.gError {
+  padding: 5px 0 15px;
+  visibility: hidden;
+  color: red;
+}

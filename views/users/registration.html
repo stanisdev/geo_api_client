@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div style="width: 400px;">
+
+  <input type="text" class="form-control" id="name" placeholder="Введите имя">
+  <div id="name_error" class="gError">&nbsp;</div>
+
+  <input type="email" class="form-control" id="email" placeholder="Введите email">
+  <div id="email_error" class="gError">&nbsp;</div>
+
+  <input type="password" class="form-control" id="ip" placeholder="Введите пароль">
+  <div id="password_error" class="gError">&nbsp;</div>
+
+  <select class="form-control" id="tariff">
+    <option value="1" selected>Бесплатный тариф</option>
+    <option value="2">Платный тариф</option>
+  </select>
+  <div id="tariff_error" class="gError">&nbsp;</div>
+
+  <button id="registration" type="button" class="btn btn-primary btn-lg">Зарегистрироваться</button>
+
+</div>
+
+
+{% endblock %}
